@@ -10,3 +10,9 @@
     display: none; 
   }
   
+
+  
+  #queue::-webkit-scrollbar {
+    display: none; 
+  }
+  
