@@ -268,16 +268,16 @@
         "password": "adminstrongpass"
       }]
   
-  export const setlocalStorage=()=>{
-    localStorage.setItem('employee',JSON.stringify(employees))
-    localStorage.setItem('admin',JSON.stringify(admin))
-  }
-  export const getlocalStorage=()=>{
-   const employee =  JSON.parse(localStorage.getItem('employee'))
-  
-   const admin = JSON.parse(localStorage.getItem('admin'))
-console.log(employee  );
-console.log(admin  );
+  // Set data into localStorage
+export const setlocalStorage = () => {
+  localStorage.setItem('employee', JSON.stringify(employees)); // Use 'employee' key here
+  localStorage.setItem('admin', JSON.stringify(admin)); // Use 'admin' key here
+};
 
-   
-  }
+// Get data from localStorage
+export const getlocalStorage = () => {
+  const employee = JSON.parse(localStorage.getItem('employee')); // Correct the key name here
+  const admin = JSON.parse(localStorage.getItem('admin')); // Correct the key name here
+
+  return { employee, admin }; // Return the values for employee and admin
+};

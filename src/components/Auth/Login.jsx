@@ -1,12 +1,13 @@
 
 import { useState } from 'react'
-function login() {
+function login({handleevent}) {
   const [email, Setemail] = useState("")
   const [password, Setpassword] = useState("")
   const prevent = (event) => {
     event.preventDefault()
     console.log(`email is ${email}`);
     console.log(`password is ${password}`);
+    handleevent(email,password)
     Setemail("")
       Setpassword("")
     
